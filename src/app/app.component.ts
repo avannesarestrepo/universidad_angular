@@ -18,9 +18,4 @@ export class AppComponent {
     this.personas = this.personasService.personas;
   }
 
-
-  onPersonaAgregada(persona: Persona) {
-    this.loggingService.enviarMensajeAConsola("personas agregada al arreglo con nombre: " + persona.nombre);
-    this.personasService.personaAgregada(persona);
-  }
 }
