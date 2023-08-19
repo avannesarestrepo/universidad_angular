@@ -1,0 +1,27 @@
+<form class="row g-3 mt-3">
+  <div class="col-md-5">
+    <label for="operadorA" class="visually-hidden">Operador A</label>
+    <input
+      type="number"
+      class="form-control"
+      name="operadorA"
+      id="operadorA"
+      placeholder="Operador A"
+      [(ngModel)]="operadorA"
+    />
+  </div>
+  <div class="col-md-5">
+    <label for="operadorB" class="visually-hidden">Operador B</label>
+    <input
+      type="number"
+      class="form-control"
+      name="operadorB"
+      id="operadorB"
+      placeholder="Operador B"
+      [(ngModel)]="operadorB"
+    />
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-primary" (click)="calcular()">Calcular</button>
+  </div>
+</form>

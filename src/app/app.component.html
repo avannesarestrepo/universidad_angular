@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+  <hr />
+  <app-formulario (resultado)="procesarResultado($event)"></app-formulario>
+  <hr />
+  <app-resultado [resultado]="resultado"></app-resultado>
+</div>
