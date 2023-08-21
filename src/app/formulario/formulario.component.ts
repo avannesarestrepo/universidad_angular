@@ -19,7 +19,11 @@ export class FormularioComponent {
 
   constructor(
     private personasService: PersonasService
-  ) {}
+  ) {
+    this.personasService.saludar.subscribe((indice) => {
+      alert(`Hola ${this.personasService.personas[indice].nombre}`);
+    })
+  }
 
   agregar() {
     this.personasService.personaAgregada(new Persona(
