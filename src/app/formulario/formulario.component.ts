@@ -6,7 +6,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Persona } from '../persona.model';
-import { LoggingService } from '../LoggingService.service';
 import { PersonasService } from '../personas.service';
 @Component({
   selector: 'app-formulario',
@@ -14,8 +13,8 @@ import { PersonasService } from '../personas.service';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
-  @ViewChild('nombreInput') nombreInput: ElementRef;
-  @ViewChild('apellidoInput') apellidoInput: ElementRef;
+  nombreInput:string;
+  apellidoInput:string;
 
   constructor(
     private personasService: PersonasService
@@ -27,10 +26,8 @@ export class FormularioComponent {
 
   agregar() {
     this.personasService.personaAgregada(new Persona(
-      this.nombreInput.nativeElement.value,
-      this.apellidoInput.nativeElement.value
+      this.nombreInput,
+      this.apellidoInput
     ));
-
-    
   }
 }
